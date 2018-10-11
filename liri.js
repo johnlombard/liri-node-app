@@ -43,10 +43,32 @@ switch (liriReturn) {
 
         // use request to  Display name of venue, location, and MM/DD/YYYY
 
-        request("https://rest.bandsintown.com/artists/" + songTitle + "/events?app_id=codingbootcamp", function (error, response, body) {
-            console.log('error:', error); // Print the error if one occurred
-            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-            console.log('body:', body); // Print the HTML for the Google homepage.
+        request("https://rest.bandsintown.com/artists/"+songTitle +"/events?app_id=codingbootcamp", function (error, response, body) {
+           
+            var JS = JSON.parse(body);
+            for (i = 0; i < 5; i++)
+            {
+              var dTime = JS[i].datetime;
+                var month = dTime.substring(5,7);
+                var year = dTime.substring(0,4);
+                var day = dTime.substring(8,10);
+                var dateForm = month + "/" + day + "/" + year
+          
+              console.log("\n---------------------------------------------------\n");
+        
+                
+              console.log("Date: " + dateForm);
+              console.log("Name: " + JS[i].venue.name);
+              console.log("City: " + JS[i].venue.city);
+              if (JS[i].venue.region !== "")
+              {
+                console.log("Country: " + JS[i].venue.region);
+              }
+              console.log("Country: " + JS[i].venue.country);
+              console.log("\n---------------------------------------------------\n");
+        
+            }
+    
           });
     }
 
@@ -126,6 +148,7 @@ function doWhatItSays() {
 			// Sets optional third argument to second item in array.
 			var two = randomArray[1];
 
-			console.log(randomArray)
+            console.log(randomArray)
+           
 		}
 	})};
