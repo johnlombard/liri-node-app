@@ -12,7 +12,7 @@
     ![Spotify](/images/spotify.png)
 1. movie-this 'any movie title'
     1. Using the "OMDB" API, you are provided: the title, year of release, IMDB rating, Rotten Tomatoes rating, cpuntry of production, language, plot, and actors.
-    ![Movie](/images/spotmovieify.png)
+    ![Movie](/images/movie.png)
 1. do-what-it-says 
     1. Reads the random.txt file
     ![Do What It Says](/images/do.png)
