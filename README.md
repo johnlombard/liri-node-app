@@ -1,5 +1,8 @@
 # liri-node-app
-##type any command after 'node liri.js':
+## Type any command after 'node liri.js':
+
+
+
 **Use quotes for mutliword titles**
 1. concert-this
     1. Using the "Bands in Town" API, you are provided: a venue name, location, and date.
