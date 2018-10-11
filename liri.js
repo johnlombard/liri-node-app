@@ -118,15 +118,11 @@ switch (liriReturn) {
       console.log("\nMovie Title: " + movie.Title);
       console.log("Release Year: " + movie.Year);
       console.log("IMDB Rating: " + movie.imdbRating);
+      console.log("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
       console.log("Country Produced In: " + movie.Country);
+      console.log("Actors: " + movie.Actors);
       console.log("Language: " + movie.Language);
       console.log("Plot: " + movie.Plot);
-      console.log("Actors: " + movie.Actors);
-
-      // Had to set to array value, as there seems to be a bug in API response,
-      // that always returns N/A for movie.tomatoRating.
-      console.log("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
-      console.log("Rotten Tomatoes URL: " + movie.tomatoURL + "\n");
     }
   });
 }
